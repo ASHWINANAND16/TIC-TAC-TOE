@@ -77,24 +77,24 @@ def check():
     for row in range(0,3):
         if ((board[row][0]==board[row][1]==board[row][2]) and (board[row][0] is not None)):
             winner=board[row][0]
-            pygame.draw.line(screen,(250,0,0),(0, (row + 1)*height/3 -height/6),(width, (row + 1)*height/3 - height/6 ), 4)
+            #pygame.draw.line(screen,(250,0,0),(0, (row + 1)*height/3 -height/6),(width, (row + 1)*height/3 - height/6 ), 4)
             break
 
     #check columns
     for column in range(0,3):
         if ((board[0][column]==board[1][column]==board[2][column]) and (board[0][column] is not None)):
             winner=board[0][column]
-            pygame.draw.line (screen, (250,0,0),((col + 1)* width/3 - width/6, 0), ((col + 1)* width/3 - width/6, height), 4)
+            #pygame.draw.line (screen, (250,0,0),((col + 1)* width/3 - width/6, 0), ((col + 1)* width/3 - width/6, height), 4)
             break
 
     #check diagonals
     if(board[0][0]==board[1][1]==board[2][2] and board[0][0] is not None):
         winner=board[0][0]
-        pygame.draw.line (screen, (250,70,70), (50, 50), (350, 350), 4)
+        #pygame.draw.line (screen, (250,70,70), (50, 50), (350, 350), 4)
 
     if(board[0][2]==board[1][1]==board[2][0] and board[0][2] is not None):
         winner=board[0][2]
-        pygame.draw.line (screen, (250,70,70), (350, 50), (50, 350), 4)
+        #pygame.draw.line (screen, (250,70,70), (350, 50), (50, 350), 4)
 
     #check draw
     if(all ([all(row) for row in board]) and winner is None):
